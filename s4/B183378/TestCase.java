@@ -1,4 +1,4 @@
-package s4.B183378; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID. 
+  package s4.B183378; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID.
 import java.lang.*;
 import s4.specification.*;
 
@@ -37,10 +37,18 @@ public class TestCase {
 	    System.out.println("checking s4.B183378.Frequencer");
 	    myObject = new s4.B183378.Frequencer();
 	    myObject.setSpace("Hi Ho Hi Ho".getBytes());
+        freq = myObject.frequency();
 	    myObject.setTarget("H".getBytes());
 	    freq = myObject.frequency();
-	    System.out.print("\"H\" in \"Hi Ho Hi Ho\" appears "+freq+" times. ");
-	    if(4 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+        System.out.println(freq);
+	    System.out.println("\"H\" in \"Hi Ho Hi Ho\" appears "+freq+" times. ");
+        if(4 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+        myObject.setTarget("".getBytes());
+        freq = myObject.frequency();
+        System.out.println(freq);
+        myObject.setSpace("".getBytes());
+        freq = myObject.frequency();
+        System.out.println(freq);
 	}
 	catch(Exception e) {
 	    System.out.println("Exception occurred: STOP");
