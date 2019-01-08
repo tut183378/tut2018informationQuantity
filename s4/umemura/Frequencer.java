@@ -78,8 +78,10 @@ public class Frequencer implements FrequencerInterface{
     private int targetCompare(int i, int j, int end) {
 	// comparing suffix_i and target_j_end by dictonary order with limitation of length;
 	// if the beginning of suffix_i matches target_i_end, and suffix is longer than target  it returns 0;
-	// if suffix_i > target_i_end it return 1;
-	// if suffix_i < target_i_end it return -1
+	//  suffix_i --> mySpace[i], mySpace[i+1], .... , mySpace[mySpace.length-1],mySpace[mySpace.length -1]
+	//  target_j_end -> myTarget[j], myTarget[j+1], .... , myTarget[end-2],myTarget[end-1]
+	// if suffix_i > target_j_end it return 1;
+	// if suffix_i < target_j_end it return -1
 	// It is not implemented yet.
 	// It should be used to search the apropriate index of some suffix.
 	// Example of search
@@ -102,6 +104,7 @@ public class Frequencer implements FrequencerInterface{
     private int subByteStartIndex(int start, int end) {
 	// It returns the index of the first suffix which is equal or greater than subBytes;
 	// not implemented yet;
+	// If myTaget is "Hi Ho",  start=0, end=2 means "Hi".
 	// For "Ho", it will return 5  for "Hi Ho Hi Ho".
 	// For "Ho ", it will return 6 for "Hi Ho Hi Ho".
 	//
@@ -113,6 +116,7 @@ public class Frequencer implements FrequencerInterface{
     private int subByteEndIndex(int start, int end) {
 	// It returns the next index of the first suffix which is greater than subBytes;
 	// not implemented yet
+	// If myTaget is "Hi Ho",  start=0, end=2 means "Hi".
 	// For "Ho", it will return 7  for "Hi Ho Hi Ho".
 	// For "Ho ", it will return 7 for "Hi Ho Hi Ho".
 	//
