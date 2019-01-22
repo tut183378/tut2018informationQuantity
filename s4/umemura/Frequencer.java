@@ -52,6 +52,7 @@ public class Frequencer implements FrequencerInterface{
 	// It is not implemented yet, 
 	// It should be used to create suffix array.
 	// Example of dictionary order
+	// suffix_i    suffix_j
 	// "i"      <  "o"        : compare by code
 	// "Hi"     <  "Ho"       ; if head is same, compare the next element
 	// "Ho"     <  "Ho "      ; if the prefix is identical, longer string is big
@@ -85,8 +86,8 @@ public class Frequencer implements FrequencerInterface{
 	// It is not implemented yet.
 	// It should be used to search the apropriate index of some suffix.
 	// Example of search
-	// suffix          target
-        // "o"       >     "i"
+	// suffix_i        target_j_end
+        // "o"       >     "i"    
         // "o"       <     "z"
 	// "o"       =     "o"
         // "o"       <     "oo"
