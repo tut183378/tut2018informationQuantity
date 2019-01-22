@@ -76,17 +76,17 @@ public class Frequencer implements FrequencerInterface{
 	//
     }
 
-    private int targetCompare(int i, int j, int end) {
-	// comparing suffix_i and target_j_end by dictonary order with limitation of length;
-	// if the beginning of suffix_i matches target_i_end, and suffix is longer than target  it returns 0;
-	//  suffix_i --> mySpace[i], mySpace[i+1], .... , mySpace[mySpace.length-1],mySpace[mySpace.length -1]
-	//  target_j_end -> myTarget[j], myTarget[j+1], .... , myTarget[end-2],myTarget[end-1]
-	// if suffix_i > target_j_end it return 1;
-	// if suffix_i < target_j_end it return -1
+    private int targetCompare(int i, int start, int end) {
+	// comparing suffix_i and target_start_end by dictonary order with limitation of length;
+	// if the beginning of suffix_i matches target_start_end, and suffix is longer than target  it returns 0;
+	//  suffix_i --> mySpace[i], mySpace[i+1], .... , mySpace[mySpace.length -1]
+	//  target_start_end -> myTarget[start], myTarget[start+1], .... , myTarget[end-1]
+	// if suffix_i > target_start_end it return 1;
+	// if suffix_i < target_start_end it return -1
 	// It is not implemented yet.
 	// It should be used to search the apropriate index of some suffix.
 	// Example of search
-	// suffix_i        target_j_end
+	// suffix_i        target_start_end
         // "o"       >     "i"    
         // "o"       <     "z"
 	// "o"       =     "o"
