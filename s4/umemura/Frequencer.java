@@ -106,7 +106,11 @@ public class Frequencer implements FrequencerInterface{
 	// not implemented yet;
 	// If myTaget is "Hi Ho",  start=0, end=2 means "Hi".
 	// For "Ho", it will return 5  for "Hi Ho Hi Ho".
+	//   5 means suffix_5,
+	//   Please note suffix_5 is "Ho" and "Ho" starts from here.
 	// For "Ho ", it will return 6 for "Hi Ho Hi Ho".
+	//   6 means suffix_6,
+	//   Please note suffix_6 is "Ho Hi Ho", and "Ho " starts from here.
 	//
 	// ****  Please write code here... ***
 	//
@@ -119,6 +123,9 @@ public class Frequencer implements FrequencerInterface{
 	// If myTaget is "Hi Ho",  start=0, end=2 means "Hi".
 	// For "Ho", it will return 7  for "Hi Ho Hi Ho".
 	// For "Ho ", it will return 7 for "Hi Ho Hi Ho".
+	//  7 means suffix_7,
+	//  Please note suffix_7 is "i Ho Hi", which does not start with "Ho" nor "Ho ".
+        //  Whereas suffix_5 is "Ho Hi Ho", which starts "Ho" and "Ho ".
 	//
 	// ****  Please write code here... ***
 	//
