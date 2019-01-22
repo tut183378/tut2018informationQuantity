@@ -1,4 +1,4 @@
-package s4.umemura; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID. 
+package s4.B183378; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID.
 import java.lang.*;
 import s4.specification.*;
 
@@ -35,7 +35,7 @@ public class TestCase {
 	    FrequencerInterface  myObject;
 	    int freq;
 	    System.out.println("checking s4.umemura.Frequencer");
-	    myObject = new s4.umemura.Frequencer();
+	    myObject = new s4.B183378.Frequencer();
 	    myObject.setSpace("Hi Ho Hi Ho".getBytes());
 	    myObject.setTarget("H".getBytes());
 	    freq = myObject.frequency();
@@ -50,7 +50,7 @@ public class TestCase {
 	    InformationEstimatorInterface myObject;
 	    double value;
 	    System.out.println("checking s4.umemura.InformationEstimator");
-	    myObject = new s4.umemura.InformationEstimator();
+	    myObject = new s4.B183378.InformationEstimator();
 	    myObject.setSpace("3210321001230123".getBytes());
 	    myObject.setTarget("0".getBytes());
 	    value = myObject.estimation();
