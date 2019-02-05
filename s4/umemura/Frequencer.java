@@ -52,11 +52,16 @@ public class Frequencer implements FrequencerInterface{
 	// It is not implemented yet, 
 	// It should be used to create suffix array.
 	// Example of dictionary order
+<<<<<<< HEAD
+=======
+	// suffix_i    suffix_j
+>>>>>>> 8ded668e640cb9e1b8fa6b94ec48166cb542e23c
 	// "i"      <  "o"        : compare by code
 	// "Hi"     <  "Ho"       ; if head is same, compare the next element
 	// "Ho"     <  "Ho "      ; if the prefix is identical, longer string is big
 	//
 	// ****  Please write code here... ***
+<<<<<<< HEAD
 	if(mySpace[i]>mySpace[j])
         return 1;
     else if(mySpace[i]<mySpace[j])
@@ -71,6 +76,10 @@ public class Frequencer implements FrequencerInterface{
         suffixCompare(i+1,j+1);
     }
     return 0; // This line should be modified.
+=======
+	//
+	return 0; // This line should be modified.
+>>>>>>> 8ded668e640cb9e1b8fa6b94ec48166cb542e23c
     }
 
     public void setSpace(byte []space) { 
@@ -84,6 +93,7 @@ public class Frequencer implements FrequencerInterface{
 	//
 	//
 	// ****  Please write code here... ***
+<<<<<<< HEAD
         for(int i=0;i<mySpace.length;i++){
             for(int j=i+1;j<mySpace.length;j++){
                 int flag = suffixCompare(i,j);
@@ -103,6 +113,23 @@ public class Frequencer implements FrequencerInterface{
 	// Example of search
 	// suffix          target
         // "o"       >     "i"
+=======
+	//
+    }
+
+    private int targetCompare(int i, int start, int end) {
+	// comparing suffix_i and target_start_end by dictonary order with limitation of length;
+	// if the beginning of suffix_i matches target_start_end, and suffix is longer than target  it returns 0;
+	//  suffix_i --> mySpace[i], mySpace[i+1], .... , mySpace[mySpace.length -1]
+	//  target_start_end -> myTarget[start], myTarget[start+1], .... , myTarget[end-1]
+	// if suffix_i > target_start_end it return 1;
+	// if suffix_i < target_start_end it return -1
+	// It is not implemented yet.
+	// It should be used to search the apropriate index of some suffix.
+	// Example of search
+	// suffix_i        target_start_end
+        // "o"       >     "i"    
+>>>>>>> 8ded668e640cb9e1b8fa6b94ec48166cb542e23c
         // "o"       <     "z"
 	// "o"       =     "o"
         // "o"       <     "oo"
@@ -120,8 +147,18 @@ public class Frequencer implements FrequencerInterface{
     private int subByteStartIndex(int start, int end) {
 	// It returns the index of the first suffix which is equal or greater than subBytes;
 	// not implemented yet;
+<<<<<<< HEAD
 	// For "Ho", it will return 5  for "Hi Ho Hi Ho".
 	// For "Ho ", it will return 6 for "Hi Ho Hi Ho".
+=======
+	// If myTaget is "Hi Ho",  start=0, end=2 means "Hi".
+	// For "Ho", it will return 5  for "Hi Ho Hi Ho".
+	//   5 means suffix_5,
+	//   Please note suffix_5 is "Ho" and "Ho" starts from here.
+	// For "Ho ", it will return 6 for "Hi Ho Hi Ho".
+	//   6 means suffix_6,
+	//   Please note suffix_6 is "Ho Hi Ho", and "Ho " starts from here.
+>>>>>>> 8ded668e640cb9e1b8fa6b94ec48166cb542e23c
 	//
 	// ****  Please write code here... ***
 	//
@@ -131,8 +168,17 @@ public class Frequencer implements FrequencerInterface{
     private int subByteEndIndex(int start, int end) {
 	// It returns the next index of the first suffix which is greater than subBytes;
 	// not implemented yet
+<<<<<<< HEAD
 	// For "Ho", it will return 7  for "Hi Ho Hi Ho".
 	// For "Ho ", it will return 7 for "Hi Ho Hi Ho".
+=======
+	// If myTaget is "Hi Ho",  start=0, end=2 means "Hi".
+	// For "Ho", it will return 7  for "Hi Ho Hi Ho".
+	// For "Ho ", it will return 7 for "Hi Ho Hi Ho".
+	//  7 means suffix_7,
+	//  Please note suffix_7 is "i Ho Hi", which does not start with "Ho" nor "Ho ".
+        //  Whereas suffix_5 is "Ho Hi Ho", which starts "Ho" and "Ho ".
+>>>>>>> 8ded668e640cb9e1b8fa6b94ec48166cb542e23c
 	//
 	// ****  Please write code here... ***
 	//

@@ -76,8 +76,7 @@ public class Frequencer implements FrequencerInterface{
             return -1;
         return 0; // This line should be modified.
     }
-
-    public void setSpace(byte []space) { 
+    public void setSpace(byte []space) {
 	mySpace = space; if(mySpace.length>0) spaceReady = true; 
 	suffixArray = new int[space.length];
 	// put all suffixes  in suffixArray. Each suffix is expressed by one integer.
@@ -93,7 +92,6 @@ public class Frequencer implements FrequencerInterface{
                     int tmpNum = suffixArray[j-1];
                     suffixArray[j-1] = suffixArray[j];
                     suffixArray[j] = tmpNum;
-                }
             }
         }
     }
@@ -148,7 +146,7 @@ public class Frequencer implements FrequencerInterface{
 	//
         int min = 0;
         int mid = 0;
-        int max = mySpace.length;
+        int max = mySpace.length-1;
         int result = 0;
         while(max-min>1){
             mid = (max+min)/2;
@@ -173,7 +171,7 @@ public class Frequencer implements FrequencerInterface{
 	//
         int min = 0;
         int mid = 0;
-        int max = mySpace.length;
+        int max = mySpace.length-1;
         int result = 0;
         while(max-min>1){
             mid = (max+min)/2;
